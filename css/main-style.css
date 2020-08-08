@@ -39,6 +39,12 @@ html{
     box-sizing: inherit;
 }
 
+h1{
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 60px;
+}
+
 .main-padding{
     padding-left: 27px;
     padding-right: 27px;
@@ -62,7 +68,7 @@ nav ul{
     list-style: none;
     font-family: Roboto Bold;
     padding-left: 0;
-    margin-left: 11px;
+    margin-left: 10px;
     margin-top: 14px;
 
 }
@@ -75,8 +81,8 @@ nav ul{
     display: block;
     color: white;
     height: 33px;
-    padding-left:11px ;
-    padding-right: 11px;
+    padding-left:13px ;
+    padding-right: 13px;
     padding-top: 7px;
     border-radius: 20px;
 
@@ -165,11 +171,229 @@ nav ul{
     padding-right: 16px;
 }
 
+.telephone{
+    text-align: right;
+    color:white;
+    position: relative;
+    top: -7px;
+}
+
+.telephone span{
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    font-style: normal;
+    letter-spacing: 0.2px;
+
+}
+
+.telephone a{
+    display: inline-block;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 24px;
+    color: white;
+    margin-top: 5px;
+    letter-spacing: 0.55px;
+    transition: all 0.5s ease;
+}
+
+.telephone a:hover{
+    color: red;
+}
+
+header h1{
+    color: white;
+    text-align: center;
+    margin-top: 270px;
+}
+
+.control{
+    display: flex;
+    position: absolute;
+}
 
 
+.control input{
+    display: none;
+}
+.control label{
+    height: 21px;
+    width: 21px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-left: 8px;
+    margin-top: 8px;
+    transition: all 0.5s ease;
+}
+
+.control label:hover{
+    cursor: pointer;
+    background: rgba(248, 247, 244,0.4);
+}
+
+.control label:nth-child(4){
+    margin-left: 0;
+
+
+}
+
+#slide1:checked ~ label:nth-child(4),
+#slide2:checked ~ label:nth-child(5),
+#slide3:checked ~ label:nth-child(6)
+{
+    background: white;
+}
+
+.btn-form{
+    display: flex;
+    justify-content: center;
+
+}
+
+.btn{
+
+    background: linear-gradient(0deg, #E74A35 0%, #F26843 100%), #FFFFFF;
+    box-shadow: 0px 2px 2px rgba(172, 16, 0, 0.64);
+    border-radius: 40px;
+    border: none;
+    margin-top: -10px;
+}
+
+
+.btn:hover{
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(0deg, #E74A35 0%, #F26843 100%);
+    box-shadow: 0px 2px 2px #AC1000;
+    cursor: pointer;
+}
+
+.btn:active{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(0deg, #F26843 0%, #E74A35 100%);
+    box-shadow: inset 0px 2px 2px #942718;
+}
+
+.btn:focus{
+    outline: none;
+}
+
+.btn-form button{
+    width: 282px;
+    height: 66px;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 44px;
+    color: white;
+}
 
 
 header{
     height: 100vh;
 
+}
+
+.promo{
+    display: flex;
+    justify-content: space-between;
+    padding-top:25px;
+}
+
+.promo article{
+    width: calc(50% - 13px);
+    border-radius: 10px;
+    height: 230px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+
+
+}
+
+.promo article:first-child{
+    background-image: url("../img/Малиновый фон.jpg");
+}
+
+.promo article:last-child{
+    background-image: url("../img/Шоколадный фон.jpg");
+}
+
+.promo h2{
+    margin-top: 0;
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 41px;
+    color: white;
+}
+
+.promo p{
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: white;
+
+}
+
+.promo a{
+    float: right;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 165px;
+    height: 50px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    position: absolute;bottom: 20px;
+    right: 20px;
+}
+
+.products{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 40px;
+}
+
+.product-item{
+    margin-left: 25px;
+    width: calc((100% - 75px) / 3);
+}
+
+.product-item:first-child{
+    margin-left: 0;
+}
+
+.product-img{
+    position: relative;
+}
+.sign{
+    position: absolute;
+}
+
+.product-item img{
+    width: 100%;
+}
+
+.product-info{
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: white;
+
+}
+
+.price{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 13px;
+    color: white;
+    text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
+}
+
+.price svg{
+    position: relative;
+    top:7px
 }
