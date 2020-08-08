@@ -1,3 +1,175 @@
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/web/roboto.woff);
+}
+
+@font-face {
+    font-family: Roboto Bold;
+    src: url(../fonts/web/robotobold.woff);
+}
+
+@font-face {
+    font-family: Roboto Medium;
+    src: url(../fonts/web/robotomedium.woff);
+}
+
 body{
     margin: 0;
+    font-family: Roboto;
+    font-size: 16px;
+    background:url("../img/Мороженко 1.png") no-repeat center 83px, radial-gradient(circle closest-side at center, white, #849d8f);
+
+
+}
+
+img{
+    max-width: 100%;
+}
+
+a{
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+
+html{
+    box-sizing: border-box;
+}
+*,*::before,*::after{
+    box-sizing: inherit;
+}
+
+.main-padding{
+    padding-left: 27px;
+    padding-right: 27px;
+}
+.wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-bar{
+    display: flex;
+    padding-top: 9px;
+    line-height: 18px;
+}
+
+nav ul{
+    margin: 0;
+}
+
+.site-navigation{
+    list-style: none;
+    font-family: Roboto Bold;
+    padding-left: 0;
+    margin-left: 11px;
+    margin-top: 14px;
+
+}
+
+.site-navigation li{
+    display: inline-block;
+}
+
+.site-navigation a{
+    display: block;
+    color: white;
+    height: 33px;
+    padding-left:11px ;
+    padding-right: 11px;
+    padding-top: 7px;
+    border-radius: 20px;
+
+}
+
+.site-navigation a:hover{
+    color: black;
+    background-color: #F7F6F3;
+}
+
+.user-navigation button:hover{
+    color: black;
+    background-color: #F7F6F3;
+}
+
+.site-navigation li:first-child{
+    margin-left: 0;
+}
+
+
+.user-navigation{
+  margin-left: auto;
+}
+
+.user-navigation button{
+    height: 33px;
+    margin-top: 14px;
+    margin-left: 6px;
+    font-size: 14px;
+    font-family: "Roboto Medium";
+    color: white;
+    background: rgba(255,255,255,0.2);
+    border: none;
+    border-radius: 30px;
+    transition: all 0.5s ease;
+
+}
+
+
+
+.user-navigation button span{
+    margin-left: 4px;
+}
+
+.user-navigation  *{
+    vertical-align: middle;
+}
+
+
+
+.user-navigation button:hover{
+    cursor: pointer;
+}
+
+.user-navigation svg g{
+    transition: all 0.5s ease;
+}
+
+.user-navigation button:hover svg g {
+    fill: black;
+}
+
+
+.search{
+    height: 33px;
+    width: 33px;
+    border-radius: 50%;
+    transition: width 3s ease;
+    overflow: hidden;
+}
+
+
+
+
+
+.login{
+ padding-left: 16px;
+    padding-right: 16px;
+}
+
+
+
+
+.basket{
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+
+
+
+
+header{
+    height: 100vh;
+
 }
