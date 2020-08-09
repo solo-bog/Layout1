@@ -17,7 +17,7 @@ body{
     margin: 0;
     font-family: Roboto;
     font-size: 16px;
-    background:url("../img/Мороженко 1.png") no-repeat center 83px, radial-gradient(circle closest-side at center, white, #849d8f);
+    background:url("../img/Мороженко 1.png") no-repeat center 83px, radial-gradient(circle closest-side at center 500px, white, #849d8f);
 
 
 }
@@ -30,7 +30,9 @@ a{
     text-decoration: none;
     transition: all 0.5s ease;
 }
-
+a:hover{
+    cursor: pointer;
+}
 
 html{
     box-sizing: border-box;
@@ -252,12 +254,15 @@ header h1{
 }
 
 .btn{
-
+    font-weight: bold;
     background: linear-gradient(0deg, #E74A35 0%, #F26843 100%), #FFFFFF;
     box-shadow: 0px 2px 2px rgba(172, 16, 0, 0.64);
     border-radius: 40px;
     border: none;
     margin-top: -10px;
+    font-size: 18px;
+    line-height: 24px;
+    color: white;
 }
 
 
@@ -287,7 +292,7 @@ header h1{
 
 
 header{
-    height: 100vh;
+    max-height: 600px;
 
 }
 
@@ -340,9 +345,6 @@ header{
     align-items: center;
     width: 165px;
     height: 50px;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 24px;
     position: absolute;bottom: 20px;
     right: 20px;
 }
@@ -362,6 +364,12 @@ header{
     margin-left: 0;
 }
 
+.product-item:hover{
+    border-radius: 4px;
+    background: rgba(248, 247, 244,0.2);
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
+}
+
 .product-img{
     position: relative;
 }
@@ -374,6 +382,7 @@ header{
 }
 
 .product-info{
+
     text-align: center;
     font-weight: 500;
     font-size: 16px;
@@ -397,3 +406,270 @@ header{
     position: relative;
     top:7px
 }
+
+
+
+.advantage{
+
+    border-radius: 10px;
+    background-image: url("../img/waffle-bg.jpg");
+    padding: 20px 20px 0 20px;
+    margin-bottom: 40px;
+}
+
+.advantage h3{
+    margin: 0;
+    margin-bottom: 10px;
+    font-family: Roboto;
+    color: #323232;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.description-of-advantage{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.advantage-item{
+    display: flex;
+    padding-bottom: 20px;
+    align-items: start;
+}
+
+.advantage-item img{
+    margin-right: 10px;
+}
+
+.advantage-item:nth-child(2n+1) .advantage-text{
+    padding-right: 15px;
+}
+
+.advantage-text{
+    margin-top: 15px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.advantage ~ div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.aside-block{
+    height: 220px;
+    width: calc(50% - 12.5px);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.blog-news{
+    background-image: url("../img/Клубничный фон.jpg");
+    background-position: 800px 570px;
+}
+
+.blog-news span{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    color: #323232;
+}
+
+.blog-news h3{
+    width: 60%;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    color: #323232;
+    text-decoration: underline;
+    margin-top: 10px;
+}
+
+.mailing{
+
+
+    background: repeating-linear-gradient(
+            -45deg,
+            white,
+            white 5px,
+            #92cdff 5px,
+            #92cdff 10px,
+            white 10px,
+            white 15px,
+            #fe9e90 15px,
+            #fe9e90 20px
+    );
+    padding: 5px;
+}
+
+.mailing > div{
+    padding: 20px;
+    border-radius: 10px;
+    height: 100%;
+    background: #F8F7F4;
+
+}
+
+.mailing p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 22px;
+    color: #5A5A5A;
+}
+
+.mailing form{
+    margin-top: 35px;
+    height: 47px;
+}
+
+.send-mail input[type=email]{
+    width: 60%;
+    height: 100%;
+    border-radius: 5px;
+    border: 1px solid rgba(178, 178, 178, 0.52);
+    font-family: Roboto;
+    font-size: 16px;
+}
+
+.send-mail input[type=submit]{
+    height: 100%;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 10px;
+}
+
+
+.map {
+    padding-top:40px ;
+    position: relative;
+}
+
+.map iframe{
+    width: 100%;
+}
+
+.adress-info {
+    position: absolute;
+    right: 50px;
+    bottom: 60px;
+    width: 300px;
+    border-radius: 20px;
+    padding: 15px 25px 15px 25px;
+    background: rgba(255, 255, 255, 0.98);
+    font-size: 14px;
+    line-height: 20px;
+    color: #323232;
+
+}
+
+.adress-info span{
+    display: block;
+
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.adress-info span:first-child{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.adress-info a{
+    color: #323232;
+}
+
+.adress-info a:hover{
+    color: red;
+}
+
+.adress-info button{
+    padding: 10px 20px 10px 20px;
+    margin: 40px auto 30px auto;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top:18px ;
+    padding-bottom: 25px;
+}
+
+.social-links a{
+    margin-left: 12px;
+
+}
+
+
+.social-links a:first-child{
+    margin-left: 0;
+}
+
+.social-links g path{
+    transition: all 0.5s ease;
+}
+
+.social-links a:hover g path{
+    fill: #E9E9E9;
+}
+
+.info-links{
+    list-style: none;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.info-links li{
+    padding-top: 5px;
+}
+
+.info-links li:nth-child(2n){
+   padding-left: 30px;
+}
+
+.info-links a{
+    font-size: 13px;
+    line-height: 16px;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+
+.info-links a:hover{
+    color: #FFBC9E;
+    border-bottom: 1px solid rgba(255, 188, 158,0.3);
+}
+
+.author svg{
+    display: block;
+}
+
+.author span{
+    font-size: 12px;
+    line-height: 16px;
+    color: #FEFEFE
+}
+
+.author a{
+    color: #FEFEFE;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+}
+
+.author a:hover{
+    color: #FFBC9E;
+    border-bottom: 1px solid rgba(255, 188, 158,0.3);
+}
+
+
+
