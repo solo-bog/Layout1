@@ -17,7 +17,7 @@ body{
     margin: 0;
     font-family: Roboto;
     font-size: 16px;
-    background:url("../img/Мороженко 1.png") no-repeat center 83px, radial-gradient(circle closest-side at center 500px, white, #849d8f);
+    background:url("../img/icecream1.png") no-repeat center 83px, radial-gradient(circle closest-side at center 500px, white, #849d8f);
 
 
 }
@@ -47,6 +47,7 @@ h1{
     line-height: 60px;
 }
 
+
 .main-padding{
     padding-left: 27px;
     padding-right: 27px;
@@ -68,18 +69,20 @@ nav ul{
 
 .site-navigation{
     list-style: none;
-    font-family: Roboto Bold;
+    font-family: Roboto;
     padding-left: 0;
     margin-left: 10px;
     margin-top: 14px;
 
 }
 
-.site-navigation li{
+.site-navigation > li{
     display: inline-block;
+    border-radius: 20px;
+    transition: all 0.5s ease;
 }
 
-.site-navigation a{
+.site-navigation > li > a{
     display: block;
     color: white;
     height: 33px;
@@ -87,12 +90,68 @@ nav ul{
     padding-right: 13px;
     padding-top: 7px;
     border-radius: 20px;
+    font-weight: bold;
 
 }
 
-.site-navigation a:hover{
+.site-navigation > li:hover{
     color: black;
     background-color: #F7F6F3;
+}
+
+.site-navigation > li:hover > a{
+    color: black;
+}
+
+.site-navigation > li:first-child:hover > .catalog{
+    display: block;
+
+}
+
+.site-navigation > li:first-child{
+    margin-left: 0;
+    position: relative;
+}
+
+.catalog{
+    display: none;
+    position: absolute;
+}
+
+.catalog ul{
+    margin-top: 4px;
+    padding-inline-start: 0;
+    list-style: none;
+    width: 145px;
+    background: #F8F7F4;
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    transition: all 0.5s ease;
+
+}
+
+.catalog ul a{
+    display: block;
+    padding-left:13px ;
+    padding-right: 13px;
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: normal;
+    color: #323232;
+
+}
+
+.catalog a:hover{
+    background:  #FBDED7;
+}
+
+.catalog a:active{
+    background: #F6B5A5;;
+}
+
+.catalog li:first-child a{
+    font-weight: bold;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
 }
 
 .user-navigation button:hover{
@@ -100,13 +159,12 @@ nav ul{
     background-color: #F7F6F3;
 }
 
-.site-navigation li:first-child{
-    margin-left: 0;
-}
+
 
 
 .user-navigation{
   margin-left: auto;
+    position: relative;
 }
 
 .user-navigation button{
@@ -129,7 +187,7 @@ nav ul{
     margin-left: 4px;
 }
 
-.user-navigation  *{
+.user-navigation button > *{
     vertical-align: middle;
 }
 
@@ -152,11 +210,47 @@ nav ul{
     height: 33px;
     width: 33px;
     border-radius: 50%;
-    transition: width 3s ease;
     overflow: hidden;
 }
 
+.search:hover + .search-form{
+    display: block;
+}
 
+.hidden-form{
+    display: none;
+    position: absolute;
+
+    z-index: 2;
+}
+
+.hidden-form:hover{
+    display: block;
+}
+.hidden-form > form{
+    margin-top: 4px;
+    padding: 20px;
+    width: 275px;
+    background: #F8F7F4;
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);    border-radius: 5px;
+    transition: all 0.5s ease;
+    border-radius: 10px;
+}
+
+.search-form{
+    left: calc(-100% + 15px);
+}
+
+.search-form input{
+    display: block;
+    border: 1px solid #D3D3D2;
+    font-size: 14px;
+    line-height: 24px;
+    border-radius: 5px;
+    height: 40px;
+    width: 100%;
+
+}
 
 
 
@@ -166,7 +260,49 @@ nav ul{
 }
 
 
+.login:hover + .login-form{
+    display: block;
+}
 
+
+
+.login-form{
+    left: -137.5px;
+}
+
+.login-form form input:first-child,
+.login-form form input:nth-child(2){
+   display: block;
+    border: 1px solid #D3D3D2;
+    font-size: 14px;
+    line-height: 24px;
+    border-radius: 5px;
+    height: 40px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+
+.login-form form input[type="submit"]{
+    margin: 0;
+    width: 100px;
+    height: 45px;
+    float: left;
+    margin-right: 15px;
+}
+
+.login-form form a{
+    color: #323232;
+    font-size: 13px;
+    line-height: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.login-form form a:hover{
+    color: #FFBC9E;
+    border-bottom: 1px solid rgba(255, 188, 158,0.3);;
+}
 
 .basket{
     padding-left: 16px;
@@ -174,10 +310,12 @@ nav ul{
 }
 
 .telephone{
+    display: inline-block;
     text-align: right;
     color:white;
-    position: relative;
-    top: -7px;
+    position: absolute;
+
+    right: 27px;
 }
 
 .telephone span{
@@ -197,7 +335,7 @@ nav ul{
     color: white;
     margin-top: 5px;
     letter-spacing: 0.55px;
-    transition: all 0.5s ease;
+
 }
 
 .telephone a:hover{
@@ -263,6 +401,7 @@ header h1{
     font-size: 18px;
     line-height: 24px;
     color: white;
+    transition: all 0.5s ease;
 }
 
 
@@ -293,6 +432,7 @@ header h1{
 
 header{
     max-height: 600px;
+    position: relative;
 
 }
 
@@ -314,11 +454,11 @@ header{
 }
 
 .promo article:first-child{
-    background-image: url("../img/Малиновый фон.jpg");
+    background-image: url("../img/raspberry-bg.jpg");
 }
 
 .promo article:last-child{
-    background-image: url("../img/Шоколадный фон.jpg");
+    background-image: url("../img/chocolate-bg.jpg");
 }
 
 .promo h2{
@@ -358,6 +498,7 @@ header{
 .product-item{
     margin-left: 25px;
     width: calc((100% - 75px) / 3);
+    transition: all 0.5s ease;
 }
 
 .product-item:first-child{
@@ -391,6 +532,7 @@ header{
 
 }
 
+
 .price{
     position: absolute;
     bottom: 10px;
@@ -407,7 +549,24 @@ header{
     top:7px
 }
 
+.product-item > div:last-child{
+    display: flex;
+    justify-content: center;
+}
 
+.product-item button{
+
+    padding: 10px 15px 10px 15px;
+    margin-bottom: 20px;
+    opacity: 0;
+
+
+}
+
+.product-item:hover button{
+
+    opacity: 1;
+}
 
 .advantage{
 
@@ -467,7 +626,7 @@ header{
 }
 
 .blog-news{
-    background-image: url("../img/Клубничный фон.jpg");
+    background-image: url("../img/strawberry-bg.jpg");
     background-position: 800px 570px;
 }
 
@@ -484,9 +643,13 @@ header{
     font-weight: bold;
     font-size: 24px;
     line-height: 30px;
-    color: #323232;
+
     text-decoration: underline;
     margin-top: 10px;
+}
+
+.blog-news a{
+    color: #323232;
 }
 
 .mailing{
@@ -671,5 +834,89 @@ footer{
     border-bottom: 1px solid rgba(255, 188, 158,0.3);
 }
 
+.modal-form{
+    display: none;
+    position: fixed;
+    top: 10vh;
+    left: calc(50% - 240px);
+    padding: 20px;
+    width: 480px;
+    background: #F8F7F4;
+    border-radius: 10px;
+    z-index: 3;
 
+
+}
+
+.modal-form svg{
+    position: absolute;
+    right: 20px;
+
+}
+
+.modal-form svg:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    transition-duration: 0.5s;
+
+}
+
+.modal-form path{
+    transition: all 0.5s ease;
+}
+
+.modal-form svg:hover path{
+    fill: red;
+}
+
+.modal-form h2{
+    margin: 0;
+    font-size: 24px;
+    line-height: 28px;
+    color: #323232;
+    margin-bottom: 20px;
+}
+
+.modal-form input:nth-child(2),
+.modal-form input:nth-child(3){
+    width: 270px;
+    display: block;
+}
+
+.modal-form input:nth-child(2),
+.modal-form input:nth-child(3),
+.modal-form textarea{
+    font-size: 16px;
+    line-height: 24px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid rgba(178, 178, 178, 0.52);
+    margin-bottom: 17px;
+}
+
+.modal-form textarea{
+    resize: none;
+    overflow: auto;
+    height: 150px;
+    width: 100%;
+}
+
+.modal-form input[type=submit]{
+    width: 141px;
+    height: 46px;
+    margin-left: auto;
+    float: right;
+
+}
+
+.filter{
+    display: none;
+    position: fixed;
+    background: rgba(0,0,0,0.6);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
 
