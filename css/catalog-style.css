@@ -1,0 +1,240 @@
+header{
+
+}
+
+.site-navigation li:first-child{
+    background: #D07058;
+}
+
+ul.breadcrumb {
+    margin-block-start: 0;
+    padding-inline-start: 0;
+    list-style: none;
+}
+ul.breadcrumb li {
+    display: inline;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: white;
+}
+ul.breadcrumb li+li:before {
+    padding-right: 4px;
+    color: black;
+    content: "\000BB";
+    color: white;
+}
+ul.breadcrumb li a {
+    font-weight: normal;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+ul.breadcrumb li a:hover {
+    color: #FFBC9E;
+    border-bottom: 1px solid rgba(255, 188, 158,0.3);
+}
+
+.heading h1{
+    margin-block-start: 0;
+    margin-block-end: 40px;
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 41px;
+    color: white;
+}
+
+.filters{
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+}
+
+.filters > div{
+    margin-right: 14px;
+}
+
+
+.filters h4{
+    margin-block-start: 5px;
+    margin-block-end: 10px;
+    margin-left: 16px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.filter-input-item{
+    display: flex;
+    align-items: center;
+    height: 35px;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    line-height: 18px;
+    color: white;
+    background: rgba(255,255,255,0.2);
+}
+
+
+.sorting{
+    flex-basis: 180px;
+}
+
+
+.sorting select:hover{
+    cursor: pointer;
+    background: white;
+    color: black;
+}
+
+.sorting select:hover option{
+    color: black;
+}
+
+.price-filter{
+    flex-basis: 220px;
+}
+
+.fat-content{
+    flex-basis: 415px;
+}
+
+.fillers label{
+    margin-right: 15px;
+}
+
+.fillers label:last-child{
+    margin-right: 0;
+}
+
+.submit-btn{
+    width: 145px;
+    justify-content: center;
+    margin-top: 31px;
+    border: 2px solid white;
+}
+
+.submit-btn:hover{
+    cursor: pointer;
+    background: white;
+    color: black;
+}
+
+.submit-btn:active{
+    background: #EDEDED;
+    box-shadow: inset 0px 2px 1px #696969;
+    border: none;
+}
+
+.products{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-top: 40px;
+}
+
+.product-item{
+    flex-basis: 267px;
+    transition: all 0.5s ease;
+}
+
+.product-item:first-child{
+    margin-left: 0;
+}
+
+.product-item:hover{
+    border-radius: 4px;
+    background: rgba(248, 247, 244,0.2);
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
+}
+
+.product-img{
+    position: relative;
+}
+.sign{
+    position: absolute;
+}
+
+.product-item img{
+    width: 100%;
+}
+
+.product-info{
+
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: white;
+
+}
+
+
+.price{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 13px;
+    color: white;
+    text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
+}
+
+.price svg{
+    position: relative;
+    top:7px
+}
+
+.product-item > div:last-child{
+    display: flex;
+    justify-content: center;
+}
+
+.product-item button{
+
+    padding: 10px 15px 10px 15px;
+    margin-bottom: 20px;
+    opacity: 0;
+
+
+}
+
+.product-item:hover button{
+
+    opacity: 1;
+}
+
+.pagination ul {
+    margin-block-start: 0;
+    padding-inline-start: 0;
+    list-style: none;
+    float: right;
+}
+
+
+.pagination ul li {
+    display: inline;
+
+}
+
+.pagination li a {
+    font-size: 16px;
+    line-height: 18px;
+    color: white;
+    padding: 2px 7px;
+    font-weight: normal;
+    color: white;
+    border-radius: 20px;
+}
+.pagination li a:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+.pagination li a:active{
+    color: black;
+    background: white;
+}
